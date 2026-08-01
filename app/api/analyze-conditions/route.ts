@@ -104,11 +104,14 @@ export async function POST(req: Request) {
 
     return Response.json(output)
   } catch (err) {
-    console.log('[v0] Error evaluando condiciones:', err instanceof Error ? err.message : err)
+    const msg = err instanceof Error ? err.message : String(err)
+    console.log('[v0] Error evaluando condiciones:', msg)
+    const esQuota = msg.includes('quota') || msg.includes('RESOURCE_EXHAUSTED')
     return Response.json(
       {
-        error:
-          'No se pudo evaluar las condiciones. Verificá que la API key de Gemini (GOOGLE_GENERATIVE_AI_API_KEY) esté configurada.',
+        error: esQuota
+          ? 'Se agotó la cuota de la API de Gemini. Generá una nueva API key en aistudio.google.com y actualizala en las variables de entorno del proyecto.'
+          : 'No se pudo evaluar las condiciones.',
       },
       { status: 500 },
     )
