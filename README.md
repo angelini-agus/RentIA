@@ -226,11 +226,6 @@ Built as a team during a hackathon (8 hours of development).
 
 | Name | Profile |
 |---|---|
-| Agustina Angelini | [github.com/angelini-agus](https://github.com/angelini-agus) |
+| Agustin Angelini | [linkedin.com/in/agustin-angelini](https://www.linkedin.com/in/agustin-angelini) · [github.com/angelini-agus](https://github.com/angelini-agus) | 
 | Franco Cuscianna | [linkedin.com/in/francocus](https://www.linkedin.com/in/francocus/) · [github.com/francocus](https://github.com/francocus) |
 
----
-
-## License
-
-No license declared. All rights reserved by the authors.
